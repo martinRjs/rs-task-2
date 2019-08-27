@@ -1,0 +1,105 @@
+@import '../theme.scss';
+
+.property-card {
+  border: $basic-border;
+  border-radius: 0 0 5px 5px;
+
+  .favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: $text-xxxlarge;
+    color:$red-alpha;
+
+    &:hover {
+      color:$red-hover;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+    min-height: 185px;
+  }
+
+  .property-stats {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    h5 {
+      color: $medium-grey;
+    }
+
+    p {
+      color: $dark-grey;
+    }
+
+    .score {
+      color: $orange;
+    }
+
+    div {
+      padding: 5px;
+
+      &:first-child {
+        border-bottom: $basic-border;
+      }
+
+      &:nth-child(2) {
+        border-bottom: $basic-border;
+        border-left: $basic-border;;
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 5px;
+      }
+
+      &:last-child {
+        border-left: $basic-border;;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .property-address {
+    display: flex;
+    border-top: $basic-border;
+    padding: 5px;
+
+    .property-addres-value {
+      font-size: $text-small;
+      flex-basis: 75%;
+    }
+
+    .property-status {
+      flex-basis: 25%;
+      background-color: rgba(39, 174, 96, 1.0);
+      color: $white;
+      align-self: center;
+      text-align: center;
+      border-radius: 3px;
+      padding: 3px;
+      margin-left: 3px;
+    }
+  }
+
+  .property-info {
+    position: relative;
+
+    .property-price {
+      font-size: $text-xlarge;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    font-size: $text-small;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $white;
+    height: 50px;
+    bottom: 3px;
+    right: 0;
+    left: 0;
+    padding: 5px;
+  }
+}
